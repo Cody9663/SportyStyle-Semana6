@@ -1,0 +1,12 @@
+{
+  "name": "sportystyle-semana6",
+  "version": "1.0.0",
+  "description": "Mini tienda virtual con Auth0, Session Storage y HTTPS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

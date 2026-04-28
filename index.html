@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportyStyle - Tienda Deportiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>SportyStyle</h1>
+    <p>Tienda virtual de ropa y accesorios deportivos</p>
+
+    <div class="login-box">
+      <button id="loginBtn">Iniciar sesión</button>
+      <button id="logoutBtn" class="oculto">Cerrar sesión</button>
+      <p id="bienvenida"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="productos">
+      <h2>Productos disponibles</h2>
+
+      <div class="contenedor-productos">
+
+        <div class="producto">
+          <img src="img/camiseta.jpg" alt="Camiseta deportiva">
+          <h3>Camiseta deportiva</h3>
+          <p>Camiseta ligera para entrenamiento y deportes al aire libre.</p>
+          <p class="precio">$12.990</p>
+          <button onclick="agregarAlCarrito('Camiseta deportiva', 12990)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/pantalon.jpg" alt="Pantalón deportivo">
+          <h3>Pantalón deportivo</h3>
+          <p>Pantalón cómodo y flexible para actividades físicas.</p>
+          <p class="precio">$19.990</p>
+          <button onclick="agregarAlCarrito('Pantalón deportivo', 19990)">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/accesorio.jpg" alt="Accesorio deportivo">
+          <h3>Botella deportiva</h3>
+          <p>Botella reutilizable ideal para gimnasio y entrenamiento.</p>
+          <p class="precio">$6.990</p>
+          <button onclick="agregarAlCarrito('Botella deportiva', 6990)">Agregar al carrito</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="carrito">
+      <h2>Carrito de compras</h2>
+      <div id="listaCarrito"></div>
+      <h3 id="totalCompra">Total: $0</h3>
+    </section>
+
+    <section class="formulario">
+      <h2>Pago y despacho simulado</h2>
+
+      <form id="formCompra">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="text" id="direccion" placeholder="Dirección de envío" required>
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <input type="text" id="telefono" placeholder="Teléfono" required>
+
+        <button type="submit">Finalizar compra</button>
+      </form>
+
+      <div id="confirmacion"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Actividad Semana 6 - Taller de Plataformas Web</p>
+  </footer>
+
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
